@@ -28,8 +28,10 @@ public class RippleEffect : MonoBehaviour
     [Range(1.0f, 3.0f)]
     public float waveSpeed = 1.25f;
 
+    /*
     [Range(0.0f, 2.0f)]
     public float dropInterval = 0.5f;
+    */
 
     [SerializeField, HideInInspector]
     Shader shader;
@@ -64,13 +66,17 @@ public class RippleEffect : MonoBehaviour
     Droplet[] droplets;
     Texture2D gradTexture;
     Material material;
+    public Material Material { get { return material; } }
     float timer;
     int dropCount;
+    Camera c;
 
-    void UpdateShaderParameters()
+    public void Init(Camera c)
     {
-        var c = GetComponent<Camera>();
-        
+        this.c = c;
+    }
+    void UpdateShaderParameters()
+    {   
         material.SetVector("_Drop1", droplets[0].MakeShaderParameter(c.aspect));
         material.SetVector("_Drop2", droplets[1].MakeShaderParameter(c.aspect));
         material.SetVector("_Drop3", droplets[2].MakeShaderParameter(c.aspect));
@@ -82,6 +88,8 @@ public class RippleEffect : MonoBehaviour
 
     void Awake()
     {
+        c = Camera.main;
+        RippleEffectManager.rippleEffects.Add(this);
         droplets = new Droplet[3];
         droplets[0] = new Droplet();
         droplets[1] = new Droplet();
@@ -112,24 +120,20 @@ public class RippleEffect : MonoBehaviour
         UpdateShaderParameters();
     }
 
-    void OnRenderImage(RenderTexture source, RenderTexture destination)
-    {
-        Graphics.Blit(source, destination, material);
-    }
 
     /// <summary>
-    /// 
+    /// Starts Ripple Effect
     /// </summary>
     /// <param name="position">World Point</param>
     public void Emit(Vector2? position = null)
     {
         if (position != null)
         {
-            var screenPoint = GetComponent<Camera>().WorldToScreenPoint(position ?? Vector2.zero);
+            var screenPoint = c.WorldToScreenPoint(position ?? Vector2.zero);
             position = new Vector2()
             {
-                x = screenPoint.x / GetComponent<Camera>().pixelWidth,
-                y = screenPoint.y / GetComponent<Camera>().pixelHeight
+                x = screenPoint.x / c.pixelWidth,
+                y = screenPoint.y / c.pixelHeight
             };
         }//0~99position to 0~1position
         droplets[dropCount++ % droplets.Length].Reset(position);

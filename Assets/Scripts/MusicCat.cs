@@ -57,13 +57,12 @@ public class MusicCat : MonoBehaviour {
 
     // Update is called once per frame
     void Update() {
-        /*
         rippleTimeAcc += Time.deltaTime;
         if(rippleTimeAcc > 0.6f)
         {
             rippleTimeAcc -= 0.6f;
-            Camera.main.GetComponent<RippleEffect>().Emit(transform.position);
-        }*/
+            GetComponent<RippleEffect>().Emit(transform.position);
+        }
 
         mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
 
