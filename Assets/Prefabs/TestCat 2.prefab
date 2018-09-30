@@ -9,19 +9,19 @@ Prefab:
     m_Modifications: []
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
-  m_RootGameObject: {fileID: 1356278166255738}
+  m_RootGameObject: {fileID: 1723053451956208}
   m_IsPrefabParent: 1
---- !u!1 &1356278166255738
+--- !u!1 &1723053451956208
 GameObject:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   serializedVersion: 5
   m_Component:
-  - component: {fileID: 4337405799058818}
-  - component: {fileID: 114436118329613654}
-  - component: {fileID: 82704429191862752}
-  - component: {fileID: 61301214606613004}
+  - component: {fileID: 4885851486273752}
+  - component: {fileID: 114676654635779574}
+  - component: {fileID: 82708827287465952}
+  - component: {fileID: 61223610300921468}
   m_Layer: 0
   m_Name: TestCat 2
   m_TagString: Untagged
@@ -29,17 +29,17 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!1 &1413553567404750
+--- !u!1 &1769851253460410
 GameObject:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   serializedVersion: 5
   m_Component:
-  - component: {fileID: 4512892052587840}
-  - component: {fileID: 33462472465285208}
-  - component: {fileID: 23195491940316158}
-  - component: {fileID: 114217746604789852}
+  - component: {fileID: 4752194785481778}
+  - component: {fileID: 33429429202352602}
+  - component: {fileID: 23801884018453132}
+  - component: {fileID: 114116729699666544}
   m_Layer: 0
   m_Name: Animation
   m_TagString: Untagged
@@ -47,39 +47,39 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &4337405799058818
+--- !u!4 &4752194785481778
 Transform:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1356278166255738}
+  m_GameObject: {fileID: 1769851253460410}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 0.25, y: 0.25, z: 1}
+  m_Children: []
+  m_Father: {fileID: 4885851486273752}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!4 &4885851486273752
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1723053451956208}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
-  - {fileID: 4512892052587840}
+  - {fileID: 4752194785481778}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!4 &4512892052587840
-Transform:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1413553567404750}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -4.2, y: 2.5, z: 0}
-  m_LocalScale: {x: 0.25, y: 0.25, z: 1}
-  m_Children: []
-  m_Father: {fileID: 4337405799058818}
-  m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!23 &23195491940316158
+--- !u!23 &23801884018453132
 MeshRenderer:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1413553567404750}
+  m_GameObject: {fileID: 1769851253460410}
   m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
@@ -88,7 +88,7 @@ MeshRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_Materials:
-  - {fileID: 2100000, guid: e635eb0022b23d34187f53cf752f2fad, type: 2}
+  - {fileID: 2100000, guid: 0a8acd8fd1133d24294b9c3f5d9a3417, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -108,19 +108,19 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!33 &33462472465285208
+--- !u!33 &33429429202352602
 MeshFilter:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1413553567404750}
+  m_GameObject: {fileID: 1769851253460410}
   m_Mesh: {fileID: 0}
---- !u!61 &61301214606613004
+--- !u!61 &61223610300921468
 BoxCollider2D:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1356278166255738}
+  m_GameObject: {fileID: 1723053451956208}
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
@@ -140,12 +140,12 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
---- !u!82 &82704429191862752
+--- !u!82 &82708827287465952
 AudioSource:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1356278166255738}
+  m_GameObject: {fileID: 1723053451956208}
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
@@ -220,18 +220,18 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 0
---- !u!114 &114217746604789852
+--- !u!114 &114116729699666544
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1413553567404750}
+  m_GameObject: {fileID: 1769851253460410}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: d247ba06193faa74d9335f5481b2b56c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  skeletonDataAsset: {fileID: 11400000, guid: 57ca20dd088a45243a6c8e117c7e88c4, type: 2}
+  skeletonDataAsset: {fileID: 11400000, guid: da8e4ce1932de8e4a8974dfc5272c5df, type: 2}
   initialSkinName: default
   initialFlipX: 0
   initialFlipY: 0
@@ -250,16 +250,18 @@ MonoBehaviour:
   _animationName: 
   loop: 0
   timeScale: 1
---- !u!114 &114436118329613654
+--- !u!114 &114676654635779574
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1356278166255738}
+  m_GameObject: {fileID: 1723053451956208}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f7d114542b2b04c4bbf65778383ffd12, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  catIndex: 0
   catNum: 0
-  audioSource: {fileID: 82704429191862752}
+  audioSource: {fileID: 82708827287465952}
+  isDragging: 0

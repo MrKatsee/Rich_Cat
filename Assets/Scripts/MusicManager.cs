@@ -12,7 +12,26 @@ public class MusicManager : MonoBehaviour {
     //public float musicDuration = 9.6f; //= 60f/100*16;
     public bool playMusic = false;
 
-    private void Awake()
+    public bool PlayMusic
+    {
+        get
+        {
+            return playMusic;
+        }
+        set
+        {
+            playMusic = value;
+
+            if (playMusic == false)
+            {
+                GetComponent<AudioSource>().Stop();
+            }
+        }
+    }
+
+    float x = 0f;
+
+    MusicManager() : base()
     {
         Instance = this;
     }
@@ -25,8 +44,17 @@ public class MusicManager : MonoBehaviour {
             audioSource.Play();
             foreach (var cat in MusicCat.cats)
             {
-                cat.audioSource.Play();
+                try
+                {
+                    cat.audioSource.time = 2.4f * x;
+                    cat.audioSource.Play();
+
+                }
+                catch (MissingReferenceException) { }
             }
+
+            x += 1f;
+            if (x > 3f) x = 0f;
             //StartCoroutine(PlayMusic());
         }
     }

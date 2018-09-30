@@ -9,7 +9,7 @@ public class ButtonManager : MonoBehaviour {
     public bool isButtonOn = true;
     public int buttonNum;
 
-    //public static List<ButtonManager> buttons = new List<ButtonManager>();
+    public static List<ButtonManager> buttons = new List<ButtonManager>();
 
     public bool IsButtonOn
     {
@@ -25,10 +25,15 @@ public class ButtonManager : MonoBehaviour {
     }
     Image buttonImage;
 
-    private void Awake()
+    private void Start()
     {
         buttonImage = GetComponent<Image>();
-        
+        buttons.Add(this);
+    }
+
+    public void RemoveButtonList()
+    {
+        buttons.Remove(this);
     }
 
     void SwitchSprite()

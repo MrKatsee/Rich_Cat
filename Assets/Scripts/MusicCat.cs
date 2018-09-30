@@ -22,6 +22,7 @@ public class MusicCat : MonoBehaviour {
 
     static public List<MusicCat> cats = new List<MusicCat>();
 
+    public int catIndex;
     public int catNum;
     public AudioSource audioSource;
 
@@ -31,9 +32,18 @@ public class MusicCat : MonoBehaviour {
     {
         myTouchArea = GetComponent<Collider2D>();
     }
+
     private void OnDestroy()
     {
+        foreach (var button in ButtonManager.buttons)
+        {
+            if (button.buttonNum == catNum)
+            {
+                button.IsButtonOn = true;
+            }
+        }
     }
+
     // Use this for initialization
     void Start() {
         uiM = GameObject.Find("Text").GetComponent<Text>();
@@ -42,8 +52,19 @@ public class MusicCat : MonoBehaviour {
         skeletonAnimation = transform.Find("Animation").GetComponent<SkeletonAnimation>();
     }
 
+
+    float rippleTimeAcc;
+
     // Update is called once per frame
     void Update() {
+        /*
+        rippleTimeAcc += Time.deltaTime;
+        if(rippleTimeAcc > 0.6f)
+        {
+            rippleTimeAcc -= 0.6f;
+            Camera.main.GetComponent<RippleEffect>().Emit(transform.position);
+        }*/
+
         mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
 
         if (Input.GetMouseButtonDown(0))
@@ -55,10 +76,16 @@ public class MusicCat : MonoBehaviour {
 
                 PlayManager.instance.SetMusicCatNum(-1);
 
+                //GetComponent<AudioSource>().Stop();
+
                 foreach(var cat in MusicCat.cats)
                 {
-                    cat.catNum -= 1;
-                    cat.ExcuteMove();
+                    if (cat.catIndex > catIndex)
+                    {
+                        cat.catIndex -= 1;
+                        cat.ExcuteMove();
+                    }
+
                 }
             }
         }
@@ -67,16 +94,23 @@ public class MusicCat : MonoBehaviour {
         {
             if (Input.GetMouseButtonUp(0))
             {
+                if (Physics2D.IsTouching(GetComponent<BoxCollider2D>(),leftScrollArea))
+                {
+                    Destroy(gameObject);
+                    return;
+                }
+
                 MusicManager.Instance.playMusic = true;
                 cats.Add(this);
 
                 PlayManager.instance.SetMusicCatNum(1);
-                catNum = PlayManager.instance.MusicCatNum;
+                catIndex = PlayManager.instance.MusicCatNum;
 
                 isDragging = false;
 
-                StartCoroutine(MoveCat());
+                skeletonAnimation.AnimationState.SetAnimation(0, "down", false);
 
+                StartCoroutine(MoveCat());
             }
             if (Input.GetMouseButton(0))
             {
@@ -170,10 +204,9 @@ public class MusicCat : MonoBehaviour {
 
     IEnumerator MoveCat()
     {
-        skeletonAnimation.AnimationState.SetAnimation(0, "down", false);
 
         transform.position = new Vector2(transform.position.x, -0.5f);
-        spawnLocation = -6.0f + (catNum * size);
+        spawnLocation = -6.0f + (catIndex * size);
 
         if (spawnLocation >= transform.position.x)
         {
@@ -200,15 +233,14 @@ public class MusicCat : MonoBehaviour {
 
         transform.position = new Vector2(spawnLocation, -0.5f);
     }
-
+    /*
     private void OnTriggerStay2D(Collider2D collision)
     {
         if (Input.GetMouseButtonUp(0))
         {
             if (collision == leftScrollArea)
             {
-                Destroy(gameObject);
             }
         }
-    }
+    }*/
 }

@@ -9,10 +9,13 @@ public class PlayManager : MonoBehaviour {
 
     CameraZoom cameraZoom;
 
-    private void Awake()
+    public PlayManager() : base()
     {
         instance = this;
+    }
 
+    private void Awake()
+    {
         cameraZoom = GameObject.Find("Main Camera").GetComponent<CameraZoom>();
     }
 
@@ -31,18 +34,29 @@ public class PlayManager : MonoBehaviour {
             musicCatNum = value;
 
             cameraZoom.musicCatNum_Camera = musicCatNum;
+
+            if (musicCatNum == 0)
+            {
+                MusicManager.Instance.PlayMusic = false;
+            }
         }
     }
 
     public void SetMusicCatNum(int value)
     {
+        int tempNum;
+
         if (value ==  1)
         {
-            musicCatNum++;
+            tempNum = MusicCatNum;
+            tempNum++;
+            MusicCatNum = tempNum;
         }
         else if (value == -1)
         {
-            musicCatNum--;
+            tempNum = MusicCatNum;
+            tempNum--;
+            MusicCatNum = tempNum;
         }
     }
 
