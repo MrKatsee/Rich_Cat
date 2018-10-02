@@ -7,7 +7,7 @@ public class ButtonManager : MonoBehaviour {
 
     public Sprite[] buttonOnOff = new Sprite[2];
     public bool isButtonOn = true;
-    public int buttonNum;
+    public GameObject cat;
 
     public static List<ButtonManager> buttons = new List<ButtonManager>();
 

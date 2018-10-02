@@ -574,7 +574,7 @@ MonoBehaviour:
   - {fileID: 21300000, guid: 3f33a25272e7e9d4da21b9d936203b23, type: 3}
   - {fileID: 21300000, guid: ba46c0ac1cdf0ff4896b25cac50e5fe7, type: 3}
   isButtonOn: 1
-  buttonNum: 1
+  cat: {fileID: 1974143104947268, guid: 306235d57f81208448a03f33d73dd650, type: 2}
 --- !u!1 &420361156
 GameObject:
   m_ObjectHideFlags: 0
@@ -1017,7 +1017,7 @@ MonoBehaviour:
   - {fileID: 21300000, guid: 98a5973247bc280408ff371c19cbe21d, type: 3}
   - {fileID: 21300000, guid: ba46c0ac1cdf0ff4896b25cac50e5fe7, type: 3}
   isButtonOn: 1
-  buttonNum: 2
+  cat: {fileID: 1781852588569316, guid: ddfefbdfa7bb10a4d8af7856b8bbdbcd, type: 2}
 --- !u!1 &919258247
 GameObject:
   m_ObjectHideFlags: 0
@@ -1505,7 +1505,6 @@ MonoBehaviour:
   reflectionColor: {r: 0.5, g: 0.5, b: 0.5, a: 1}
   reflectionStrength: 0.7
   waveSpeed: 1.86
-  dropInterval: 0.5
   shader: {fileID: 4800000, guid: 162fe242d486f4dab90ed53db15b9c19, type: 3}
 --- !u!1 &1656915173
 GameObject:
@@ -1622,7 +1621,7 @@ MonoBehaviour:
   - {fileID: 21300000, guid: aa658e9f3a863f74189e8eb516099593, type: 3}
   - {fileID: 21300000, guid: ba46c0ac1cdf0ff4896b25cac50e5fe7, type: 3}
   isButtonOn: 1
-  buttonNum: 0
+  cat: {fileID: 1781852588569316, guid: ddfefbdfa7bb10a4d8af7856b8bbdbcd, type: 2}
 --- !u!1 &1876336862
 GameObject:
   m_ObjectHideFlags: 0

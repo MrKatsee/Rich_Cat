@@ -31,12 +31,12 @@ public class UIManager : MonoBehaviour {
 
         if (buttonManager.isButtonOn)
         {
-            cats_Temp = Instantiate(cats[buttonNum], mousePos, Quaternion.identity);
+            cats_Temp = Instantiate(buttonManager.cat, mousePos, Quaternion.identity);
 
             buttonManager.IsButtonOn = false;
 
             cats_Temp.GetComponent<MusicCat>().isDragging = true;
-            cats_Temp.GetComponent<MusicCat>().catNum = buttonNum;
+            cats_Temp.GetComponent<MusicCat>().originalPrefab = buttonManager.cat;
         }
 
         //debug.text = "Hello!";

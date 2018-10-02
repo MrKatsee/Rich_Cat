@@ -22,9 +22,23 @@ public class MusicCat : MonoBehaviour {
 
     static public List<MusicCat> cats = new List<MusicCat>();
 
+    [HideInInspector]
     public int catIndex;
-    public int catNum;
+
+    [HideInInspector]
+    public GameObject originalPrefab;
+
+
+    public void PlayMusic(float x)
+    {
+        if (audioSource.isPlaying == false || Mathf.Abs(audioSource.time) - 2.4f * x > 0.1f)
+        {
+            audioSource.time = 2.4f * x;
+            audioSource.Play();
+        }
+    }
     public AudioSource audioSource;
+
 
     public bool isDragging = false;
 
@@ -32,22 +46,22 @@ public class MusicCat : MonoBehaviour {
     {
         myTouchArea = GetComponent<Collider2D>();
     }
-
     private void OnDestroy()
     {
         foreach (var button in ButtonManager.buttons)
         {
-            if (button.buttonNum == catNum)
+            if (button.cat == originalPrefab)
             {
                 button.IsButtonOn = true;
             }
         }
     }
-
+    
     // Use this for initialization
     void Start() {
         uiM = GameObject.Find("Text").GetComponent<Text>();
         leftScrollArea = GameObject.Find("ScrollArea").GetComponent<Collider2D>();
+        
 
         skeletonAnimation = transform.Find("Animation").GetComponent<SkeletonAnimation>();
     }
@@ -57,13 +71,6 @@ public class MusicCat : MonoBehaviour {
 
     // Update is called once per frame
     void Update() {
-        rippleTimeAcc += Time.deltaTime;
-        if(rippleTimeAcc > 0.6f)
-        {
-            rippleTimeAcc -= 0.6f;
-            GetComponent<RippleEffect>().Emit(transform.position);
-        }
-
         mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
 
         if (Input.GetMouseButtonDown(0))
@@ -98,6 +105,8 @@ public class MusicCat : MonoBehaviour {
                     Destroy(gameObject);
                     return;
                 }
+
+                
 
                 MusicManager.Instance.playMusic = true;
                 cats.Add(this);
@@ -229,7 +238,7 @@ public class MusicCat : MonoBehaviour {
 
             yield return null;
         }
-
+        
         transform.position = new Vector2(spawnLocation, -0.5f);
     }
     /*

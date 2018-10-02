@@ -46,9 +46,7 @@ public class MusicManager : MonoBehaviour {
             {
                 try
                 {
-                    cat.audioSource.time = 2.4f * x;
-                    cat.audioSource.Play();
-
+                    cat.PlayMusic(x);
                 }
                 catch (MissingReferenceException) { }
             }
