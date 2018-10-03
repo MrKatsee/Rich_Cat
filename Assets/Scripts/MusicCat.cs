@@ -76,7 +76,7 @@ public class MusicCat : MonoBehaviour {
 
                 PlayManager.instance.SetMusicCatNum(-1);
 
-                //GetComponent<AudioSource>().Stop();
+                GetComponent<AudioSource>().Stop();
 
                 foreach(var cat in MusicCat.cats)
                 {

@@ -21,7 +21,7 @@ public class MusicManager : MonoBehaviour {
         set
         {
             playMusic = value;
-
+            
             if (playMusic == false)
             {
                 GetComponent<AudioSource>().Stop();
@@ -55,13 +55,6 @@ public class MusicManager : MonoBehaviour {
 
             x += 1f;
             if (x > 3f) x = 0f;
-            //StartCoroutine(PlayMusic());
         }
     }
-    /*
-    public IEnumerator PlayMusic()
-    {
-
-    }
-    */
 }
