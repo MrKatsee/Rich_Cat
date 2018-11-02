@@ -66,8 +66,7 @@ public class MusicCat : MonoBehaviour {
         skeletonAnimation = transform.Find("Animation").GetComponent<SkeletonAnimation>();
     }
 
-
-    float rippleTimeAcc;
+    
 
     // Update is called once per frame
     void Update() {
@@ -212,7 +211,6 @@ public class MusicCat : MonoBehaviour {
 
     IEnumerator MoveCat()
     {
-
         transform.position = new Vector2(transform.position.x, -0.5f);
         spawnLocation = -6.0f + (catIndex * size);
 
@@ -227,14 +225,14 @@ public class MusicCat : MonoBehaviour {
 
         while (true)
         {
+            speed += Time.deltaTime;
+
+            transform.position = new Vector2(transform.position.x - speed, -0.5f);
+
             if (spawnLocation >= transform.position.x)
             {
                 break;
             }
-
-            speed += Time.deltaTime;
-
-            transform.position = new Vector2(transform.position.x - speed, -0.5f);
 
             yield return null;
         }

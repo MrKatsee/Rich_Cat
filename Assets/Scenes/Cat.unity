@@ -1426,86 +1426,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 1192563261}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a1bc7030f5bb244b09b8037c2ded95f1, type: 3}
+  m_Script: {fileID: 11500000, guid: 941470a8d7b75af4f8a2495353e57529, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  waveform:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 2
-      time: 0
-      value: 0.5
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-    - serializedVersion: 2
-      time: 0.04174881
-      value: 1.8043747
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-    - serializedVersion: 2
-      time: 0.18712464
-      value: -0.8787445
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-    - serializedVersion: 2
-      time: 0.295372
-      value: 0.97437745
-      inSlope: 0.05018499
-      outSlope: 0.05018499
-      tangentMode: 0
-    - serializedVersion: 2
-      time: 0.395372
-      value: 0.035626233
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-    - serializedVersion: 2
-      time: 0.48300475
-      value: 0.628122
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-    - serializedVersion: 2
-      time: 0.56649476
-      value: 0.36063233
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-    - serializedVersion: 2
-      time: 0.65
-      value: 0.61749727
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-    - serializedVersion: 2
-      time: 0.75
-      value: 0.46
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-    - serializedVersion: 2
-      time: 0.85
-      value: 0.52
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-    - serializedVersion: 2
-      time: 0.99
-      value: 0.5
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 0
-  refractionStrength: 0.28
-  reflectionColor: {r: 0.5, g: 0.5, b: 0.5, a: 1}
-  reflectionStrength: 0.7
-  waveSpeed: 1.86
-  shader: {fileID: 4800000, guid: 162fe242d486f4dab90ed53db15b9c19, type: 3}
 --- !u!1 &1656915173
 GameObject:
   m_ObjectHideFlags: 0
