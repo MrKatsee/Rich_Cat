@@ -113,6 +113,11 @@ public class RippleEffect : MonoBehaviour
         UpdateShaderParameters();
     }
 
+    private void OnDestroy()
+    {
+        RippleEffectManager.rippleEffects.Remove(this);
+    }
+
     void Update()
     {
         foreach (var d in droplets) d.Update();

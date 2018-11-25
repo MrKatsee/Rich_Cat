@@ -211,7 +211,7 @@ MeshRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_Materials:
-  - {fileID: 2100000, guid: 0a8acd8fd1133d24294b9c3f5d9a3417, type: 2}
+  - {fileID: 2100000, guid: 04f4584e3cf390b4cadf79f2336f75cb, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -374,8 +374,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d247ba06193faa74d9335f5481b2b56c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  skeletonDataAsset: {fileID: 11400000, guid: da8e4ce1932de8e4a8974dfc5272c5df, type: 2}
-  initialSkinName: default
+  skeletonDataAsset: {fileID: 11400000, guid: 8984f1d7403c9b844aea5b57bd5c3959, type: 2}
+  initialSkinName: sung
   initialFlipX: 0
   initialFlipY: 0
   separatorSlotNames: []

@@ -1,0 +1,111 @@
+
+고먐미.png
+size: 1024,1024
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+Skin/Acc/고먐미_acc_nocat_0000_sun_star-2-복사
+  rotate: false
+  xy: 438, 817
+  size: 374, 180
+  orig: 374, 180
+  offset: 0, 0
+  index: -1
+Skin/Acc/고먐미_acc_nocat_0001_ribbon-복사
+  rotate: false
+  xy: 814, 826
+  size: 173, 171
+  orig: 173, 171
+  offset: 0, 0
+  index: -1
+Skin/Acc/고먐미_acc_nocat_0002_sunglass-복사
+  rotate: false
+  xy: 2, 122
+  size: 345, 133
+  orig: 345, 133
+  offset: 0, 0
+  index: -1
+Skin/Acc/고먐미_acc_nocat_0003_curlhair-복사
+  rotate: false
+  xy: 2, 257
+  size: 378, 225
+  orig: 378, 225
+  offset: 0, 0
+  index: -1
+Skin/Acc/고먐미_acc_nocat_0004_콧수염-복사
+  rotate: false
+  xy: 518, 347
+  size: 126, 125
+  orig: 126, 125
+  offset: 0, 0
+  index: -1
+Skin/Acc/고먐미_acc_nocat_0005_페도라-복사
+  rotate: false
+  xy: 438, 641
+  size: 266, 174
+  orig: 266, 174
+  offset: 0, 0
+  index: -1
+Skin/Acc/고먐미_acc_nocat_0006_small_hat-복사
+  rotate: true
+  xy: 677, 474
+  size: 144, 136
+  orig: 144, 136
+  offset: 0, 0
+  index: -1
+body
+  rotate: false
+  xy: 2, 484
+  size: 434, 513
+  orig: 434, 513
+  offset: 0, 0
+  index: -1
+left_ear
+  rotate: false
+  xy: 706, 620
+  size: 104, 195
+  orig: 104, 195
+  offset: 0, 0
+  index: -1
+left_eye
+  rotate: false
+  xy: 291, 91
+  size: 30, 29
+  orig: 30, 29
+  offset: 0, 0
+  index: -1
+mouth
+  rotate: true
+  xy: 349, 185
+  size: 70, 29
+  orig: 70, 29
+  offset: 0, 0
+  index: -1
+right_ear
+  rotate: false
+  xy: 2, 2
+  size: 287, 118
+  orig: 287, 118
+  offset: 0, 0
+  index: -1
+right_eye
+  rotate: false
+  xy: 989, 969
+  size: 27, 28
+  orig: 27, 28
+  offset: 0, 0
+  index: -1
+고먐미_0002s_0000_right_hand
+  rotate: true
+  xy: 438, 474
+  size: 165, 237
+  orig: 165, 237
+  offset: 0, 0
+  index: -1
+고먐미_0002s_0001_left_hand
+  rotate: false
+  xy: 382, 337
+  size: 134, 135
+  orig: 134, 135
+  offset: 0, 0
+  index: -1

@@ -115,7 +115,7 @@ public class MusicCat : MonoBehaviour {
 
                 isDragging = false;
 
-                skeletonAnimation.AnimationState.SetAnimation(0, "down", false);
+                skeletonAnimation.AnimationState.SetAnimation(0, "Down", false);
 
                 StartCoroutine(MoveCat());
             }
@@ -236,7 +236,8 @@ public class MusicCat : MonoBehaviour {
 
             yield return null;
         }
-        
+
+        this.GetComponent<RippleEffect>().Emit(transform.position);
         transform.position = new Vector2(spawnLocation, -0.5f);
     }
     /*
